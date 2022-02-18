@@ -1,0 +1,66 @@
+@charset 'UTF-8';
+@import "../background/background";
+*{margin: 0; padding: 0;}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+header{
+    width: 90%;
+    height: 10%;
+    .logo{
+        margin: 0 auto;
+        width: 200px;
+        height: 100%;
+        @include background_center_contain;
+        background-image: url('../../images/boxful_header_logo.webp');
+    }
+    .logo:hover{cursor: pointer;}
+}
+
+.login_form_wrap{
+    margin: 0 auto;
+    width: 90%;
+    height: 80%;
+    border: 1px solid black;
+    .form{
+        margin: 0 auto;
+        width: 80%;
+        height: 70%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        .id_pw_wrap{
+            width: 250px;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            .input_id, .input_pw{
+                width: 200px;
+                height: 40px;
+            }
+        }
+        
+        .input_submit{
+            width: 100px;
+            height: 100px;
+            font-size: 25px;
+            align-self: end;
+            justify-self: flex-start;
+        }
+        .input_submit:hover{cursor: pointer;}
+    }
+    .member_form{
+        margin: 0 auto;
+        width: 300px;
+        height: 50px;
+        .member_submit{
+            width: 100px;
+            height: 30px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+    }
+}

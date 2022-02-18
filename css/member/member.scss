@@ -1,0 +1,109 @@
+@charset 'UTF-8';
+@import "../background/background";
+*{ margin: 0; padding: 0; }
+html,body{
+    width: 100%;
+    height: 100%;
+}
+.header_wrap{
+    margin: 0 auto;
+    width: 400px;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+}
+.logo{
+    width: 200px;
+    height: 80px;
+    @include background_center_contain;
+    background-image: url('../../images/boxful_header_logo.webp');
+}
+.logo:hover{cursor: pointer;}
+.title{ 
+    margin: 25px 0 0 70px;
+    width: 200px;
+    height: 80px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.sign_up_form_wrap{
+    margin: 0 auto;
+    width: 500px;
+    height: 600px;
+    background-color: rgba(0, 196, 179, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    input{
+        width: 250px;
+        height: 20px;
+        padding: 10px 10px 10px 10px;
+        border: none;
+        margin: 0 0 0 20px;
+    }
+    
+    .id_wrap{
+        width: 400px;
+        height: 40px;
+    }
+    .name_wrap{
+        width: 400px;
+        height: 60px;
+    }
+    .input_id{
+    }
+    .input_name{
+    }
+    .id_check_btn, .name_check_btn{
+        width: 80px;
+        height: 40px;
+        line-height: 10px;
+        text-align: center;
+        font-size: 15px;
+    }
+    .id_check_result, .name_check_result{
+        font-size: 13px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .id_check_btn:hover{ cursor: pointer; }
+    .name_check_btn:hover{ cursor: pointer; }
+    .submit_text{
+        padding: 0;
+        width: 150px;
+        height: 40px;
+        line-height: 38px;
+        justify-self: row;
+        background-color: #fef9e5;
+        font-size: 20px;
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+    }
+    a:link{ color: #fff; }
+    a:visited{ color: #000; }
+    a:hover{ color:darkblue; }
+    a:active{ color:deepskyblue; }
+    a{
+        text-decoration: none;
+        margin: 0 0 0 20px;
+    }
+
+    .login_btn{
+        justify-self: row;
+        background-color: #fef9e5;
+        width: 150px;
+        height: 40px;
+        line-height: 38px;
+        font-size: 20px;
+        text-align: center;
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+    }
+    .submit_text:hover{cursor: pointer;}
+}

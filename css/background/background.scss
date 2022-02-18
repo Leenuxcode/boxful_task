@@ -1,0 +1,12 @@
+@charset 'UTF-8';
+
+@mixin background_center_contain{
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+@mixin background_center_cover{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

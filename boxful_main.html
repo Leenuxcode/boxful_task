@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="./css/main.css" />
+    <script src="./javaScript/main.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- 파비콘 -->
+    <link href="./images/boxful-logo.ico" rel="shortcut icon"/>
+    <!-- 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- Font - Lato -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto+Mono:wght@300;500&display=swap" rel="stylesheet">
+        <!-- Font - Noto Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto+Mono:wght@300;500&display=swap" rel="stylesheet">
+    <!-- XEICON icon을 사용하기 위한 link -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <title>박스풀 - 공유창고 | '배송부터 짐보관까지'|</title>
+</head>
+<body>
+    <header>
+        <!-- Boxful Logo -->
+        <div class="header_boxful_logo_wrap">
+            <div class="header_boxful_logo"></div>
+        </div>
+        <div class="header_right_side_wrap">
+            <!-- Navigation 프로모션 / 오픈예정 지점 / 공유창고 종류 -->
+            <nav>
+                <div class="nav_promotion_wrap">
+                    <ul class="nav_promotion_ul">
+                        <li class="nav_promotion_text">프로모션</li>
+                        <li class="nav_promotion_point"></li>
+                        <li class="nav_promotion_arrow xi-angle-down-thin"></li>
+                    </ul>
+                </div>
+                <div class="nav_openPlan_wrap">
+                    <ul class="nav_openPlan_ul">
+                        <li class="nav_openPlan_text">오픈예정 지점</li>
+                        <li class="nav_openPlan_point"></li>
+                        <li class="nav_openPlan_arrow"></li>
+                    </ul>
+                </div>
+                <div class="nav_shareType_wrap">
+                    <ul class="nav_shareType_ul">
+                        <li class="nav_shareType_text">공유창고 종류</li>
+                        <li class="nav_shareType_point"></li>
+                        <li class="nav_shareType_arrow xi-angle-down-thin"></li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- Header Aside 1:1 문의 / 로그인 / English / 3PL -->
+            <ul class="header_aside_ul">
+                <li class="sssssssssssssssssssssssssssssssssssssss">1:1 문의</li>
+                <li id="header_aside_login" class="header_aside_login">로그인</li>
+                <li class="header_aside_english">English</li>
+                <li class="header_aside_company">3PL(기업전용)</li>
+            </ul>
+        </div>
+        <div class="header_mobile_wrap">
+            <ul class="header_mobile_nav_ul">
+                <li class="header_mobile_english">ENGLISH</li>
+                <li id="header_mobile_login" class="header_mobile_login">로그인</li>
+                <li id="header_mobile_nav" class="header_mobile_nav xi-bars">
+                    <div class="header_mobile_side_nav_wrap">
+                        <div id="side_menu_close_btn" class="header_mobile_side_nav_close_btn xi-close"></div>
+                        <div id="header_mobile_side_nav_login" class="header_mobile_side_nav_login">로그인</div>
+                        <ul class="header_mobile_side_share">
+                            <li class="header_mobile_side_share--title">공유창고 종류</li>
+                            <li class="header_mobile_side_share--product">물품 단위</li>
+                            <li class="header_mobile_side_share--area">면적 단위</li>
+                            <li class="header_mobile_side_share--self">셀프스토리지</li>
+                            <li class="header_mobile_side_share--company">3PL(기업전용)</li>
+                        </ul>
+                        <ul class="header_mobile_side_open">
+                            <li class="header_mobile_side_open--title">오픈예정 지점</li>
+                            <li class="header_mobile_side_open--notice">신규지점 오픈 알림</li>
+                        </ul>
+                        <ul class="header_mobile_side_promotion">
+                            <li class="header_mobile_side_promotion--title">프로모션</li>
+                            <li class="header_mobile_side_promotion--open">안양동안점 오픈 프로모션</li>
+                            <li class="header_mobile_side_promotion--reservation">인천계양점 사전예약 프로모션</li>
+                        </ul>
+                        <ul class="header_mobile_side_footer">
+                            <li class="header_mobile_side_footer--useWay side_useWay">
+                                <div class="side_useWay--useWay">이용방법</div>
+                                <div class="side_useWay--company">회사소개</div>
+                                <div class="side_useWay--question">자주 묻는 질문</div>
+                            </li>
+                            <li class="header_mobile_side_footer--telNum">02-561-4999</li>
+                            <li class="header_mobile_side_footer--email">support@boxful.kr</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="kakao_chat">
+            <div class="kakao_chat_img"></div>
+            <div class="kakao_chat_text">바로 상담하기</div>
+        </div>
+        <section class="first_banner_wrap">
+            <article class="first_banner_img_background_wrap">
+                <div class="first_banner_img first_banner_img_background"></div>
+            </article>
+            <article class="first_banner_img_kakao_wrap">
+                <div class="first_banner_img first_banner_img_kakao"></div>
+            </article>
+        </section>
+        <section class="share_box_category_wrap">
+            <!-- 공유창고 종류 - 제목 -->
+            <article class="share_box_category_title_wrap">
+                <div class="share_box_category_title--text">공유창고 종류</div>
+                <div class="share_box_category_title--text_background"></div>
+                <p class="share_box_category_title_text_sub">개인, 기업, 남녀노소 모두 사용 가능한 공유창고</p>
+            </article>
+            <!-- 공유창고 종류 - 셀프스토리지 / 물품 단위 / 면적 단위 -->
+            <article class="share_box_category_info_wrap">
+                <!-- 셀프스토리지 -->
+                <div class="share_box_category_self_wrap">
+                    <ul class="share_box_category_self">
+                        <li class="share_box_category_self--img"></li>
+                        <li class="share_box_category_self--info_wrap">
+                            <p class="share_box_category_self_info_sub_title">방문형</p>
+                            <p class="share_box_category_self_info_title">셀프스토리지</p>
+                            <p class="share_box_category_self_info_pay">장기 보관 시 <br>최대 30% 할인</p>
+                        </li>
+                        <li class="share_box_category_self--detail">
+                            <p class="share_box_category_self_detail_text">상세설명</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 물품 단위 -->
+                <div class="share_box_category_product_wrap">
+                    <ul class="share_box_category_product">
+                        <li class="share_box_category_product--img"></li>
+                        <li class="share_box_category_product--info_wrap">
+                            <p class="share_box_category_product_info_sub_title">배송형</p>
+                            <p class="share_box_category_product_info_title">물품 단위</p>
+                            <p class="share_box_category_product_info_pay">월 ₩7500부터 <br>(최소 1개월)</p>
+                        </li>
+                        <li class="share_box_category_product--detail">
+                            <p class="share_box_category_product_detail_text">상세설명</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 면적 단위 -->
+                <div class="share_box_category_area_wrap">
+                    <ul class="share_box_category_area">
+                        <li class="share_box_category_area--img"></li>
+                        <li class="share_box_category_area--info_wrap">
+                            <p class="share_box_category_area_info_sub_title">배송형</p>
+                            <p class="share_box_category_area_info_title">물품 단위</p>
+                            <p class="share_box_category_area_info_pay">월 ₩69,000부터 <br>(최소 1개월)</p>
+                        </li>
+                        <li class="share_box_category_area--detail">
+                            <p class="share_box_category_area_detail_text">상세설명</p>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+        <section class="asia">
+            <article class="asia_img"></article>
+            <article class="asia_info_wrap">
+                <div class="asia_info_text">
+                    <p class="asia_info_text_a">전 세계에 있는 박스풀 지점을 확인하고</p>
+                    <p class="asia_info_text_b">다양한 할인혜택을 받으세요!</p>
+                </div>
+                <div class="asia_news">뉴스 보기</div>
+            </article>
+        </section>
+        <section class="detail_explain">
+            <article class="detail_explain_title_wrap">
+                <p class="detail_explain_title--text">상세설명</p>
+                <p class="detail_explain_title--text_background"></p>
+                <p class="detail_explain_title_text_sub">보증금없이 짐보관 가능한 공유창고</p>
+            </article>
+            <article class="detail_explain_self">
+                <div class="detail_explain_self_wrap">
+                    <ul class="detail_explain_self_info">
+                        <li class="detail_explain_self_info--title">셀프스토리지</li>
+                        <li class="detail_explain_self_info--sub_title">24시간 간편하고 안전하게 나만의 공유창고</li>
+                        <li class="detail_explain_self_info--customer_center">
+                            <div class="detail_explain_self_info_customer_center_clock"></div>
+                            <ul class="detail_explain_self_info_customer_center_info">
+                                <li class="detail_explain_self_info_customer_center_info--title">고객센터</li>
+                                <li class="detail_explain_self_info_customer_center_info--time">월요일 - 금요일 : 오전 10시 ~ 오후 7시</li>
+                                <li class="detail_explain_self_info_customer_center_info--sub_time">(주말 및 공휴일 휴무)</li>
+                            </ul>
+
+                        </li>
+                        <li class="detail_explain_self_info--apply">
+                            <div class="detail_explain_self_info_apply">바로 신청하기</div>
+                            
+                            <div class="detail_explain_self_info_estn">1초 견적 받기</div>
+                        </li>
+                    </ul>
+                    <div class="detail_explain_self_img"></div>
+                </div>
+            </article>
+            <div class="clear"></div>
+            <article class="detail_explain_slide_wrap">
+                <div class="detail_explain_slide">
+                    <div class="detail_explain_slide_move">
+                        <ul class="detail_explain_slide_move--incheon detail_slide_margin">
+                            <li class="detail_explain_slide_move--incheon--img_wrap">
+                                <div class="detail_explain_slide_move--incheon--img"></div>
+                            </li>
+                            <li class="detail_explain_slide_move_img_info_wrap">
+                                <div class="detail_explain_slide_move--incheon--title detail_slide_text">
+                                    <p class="detail_explain_slide_move--incheon--title--subject">인천 계양점</p>
+                                    <p class="detail_explain_slide_move--incheon--title--pay">월 76,000원부터</p>
+                                </div>
+                                <div class="detail_explain_slide_move--incheon--join join">알아보기</div>
+                            </li>
+                        </ul>
+                        <ul class="detail_explain_slide_move--anyang detail_slide_margin">
+                            <li class="detail_explain_slide_move--anyang--img_wrap">
+                                <div class="detail_explain_slide_move--anyang--img"></div>
+                            </li>
+                            <li class="detail_explain_slide_move_img_info_wrap">
+                                <div class="detail_explain_slide_move--anyang--title detail_slide_text">
+                                    <p class="detail_explain_slide_move--anyang--title--subject">안양 동안점</p>
+                                    <p class="detail_explain_slide_move--anyang--title--pay">월 75,650원부터</p>
+                                </div>
+                                <div class="detail_explain_slide_move--anyang--join join">알아보기</div>
+                            </li>
+                        </ul>
+                        <ul class="detail_explain_slide_move--nonhyeon detail_slide_margin">
+                            <li class="detail_explain_slide_move--nonhyeon--img_wrap">
+                                <div class="detail_explain_slide_move--nonhyeon--img"></div>
+                            </li>
+                            <li class="detail_explain_slide_move_img_info_wrap">
+                                <div class="detail_explain_slide_move--nonhyeon--title detail_slide_text">
+                                    <p class="detail_explain_slide_move--nonhyeon--title--subject">논현점</p>
+                                    <p class="detail_explain_slide_move--nonhyeon--title--pay">월 93,000원부터</p>
+                                </div>
+                                <div class="detail_explain_slide_move--nonhyeon--join join">알아보기</div>
+                            </li>
+                        </ul>
+                        <ul class="detail_explain_slide_move--yeoksam detail_slide_margin">
+                            <li class="detail_explain_slide_move--yeoksam--img_wrap">
+                                <div class="detail_explain_slide_move--yeoksam--img"></div>
+                            </li>
+                            <li class="detail_explain_slide_move_img_info_wrap">
+                                <div class="detail_explain_slide_move--yeoksam--title detail_slide_text">
+                                    <p class="detail_explain_slide_move--yeoksam--title--subject">역삼점</p>
+                                    <p class="detail_explain_slide_move--yeoksam--title--pay">월 93,000원부터</p>
+                                </div>
+                                <div class="detail_explain_slide_move--yeoksam--join join">알아보기</div>
+                            </li>
+                        </ul>
+                        <ul class="detail_explain_slide_move--bongcheon detail_slide_margin">
+                            <li class="detail_explain_slide_move--bongcheon--img_wrap">
+                                <div class="detail_explain_slide_move--bongcheon--img"></div>
+                            </li>
+                            <li class="detail_explain_slide_move_img_info_wrap">
+                                <div class="detail_explain_slide_move--bongcheon--title detail_slide_text">
+                                    <p class="detail_explain_slide_move--bongcheon--title--subject">봉천역점</p>
+                                    <p class="detail_explain_slide_move--bongcheon--title--pay">월 76,000원부터</p>
+                                </div>
+                                <div class="detail_explain_slide_move--bongcheon--join join">알아보기</div>
+                            </li>
+                        </ul>
+                        <ul class="detail_explain_slide_move--bangidong detail_slide_margin">
+                            <li class="detail_explain_slide_move--bangidong--img_wrap">
+                                <div class="detail_explain_slide_move--bangidong--img"></div>
+                            </li>
+                            <li class="detail_explain_slide_move_img_info_wrap">
+                                <div class="detail_explain_slide_move--bangidong--title detail_slide_text">
+                                    <p class="detail_explain_slide_move--bangidong--title--subject">방이동점</p>
+                                    <p class="detail_explain_slide_move--bangidong--title--pay">월 47,000원부터</p>
+                                </div>
+                                <div class="detail_explain_slide_move--bangidong--join join">알아보기</div>
+                            </li>
+                        </ul>
+                        <ul class="detail_explain_slide_move--incheon detail_slide_margin">
+                            <li class="detail_explain_slide_move--incheon--img_wrap">
+                                <div class="detail_explain_slide_move--incheon--img"></div>
+                            </li>
+                            <li class="detail_explain_slide_move_img_info_wrap">
+                                <div class="detail_explain_slide_move--incheon--title detail_slide_text">
+                                    <p class="detail_explain_slide_move--incheon--title--subject">인천 계양점</p>
+                                    <p class="detail_explain_slide_move--incheon--title--pay">월 76,000원부터</p>
+                                </div>
+                                <div class="detail_explain_slide_move--incheon--join join">알아보기</div>
+                            </li>
+                        </ul>
+                        <ul class="detail_explain_slide_move--anyang detail_slide_margin">
+                            <li class="detail_explain_slide_move--anyang--img_wrap">
+                                <div class="detail_explain_slide_move--anyang--img"></div>
+                            </li>
+                            <li class="detail_explain_slide_move_img_info_wrap">
+                                <div class="detail_explain_slide_move--anyang--title detail_slide_text">
+                                    <p class="detail_explain_slide_move--anyang--title--subject">안양 동안점</p>
+                                    <p class="detail_explain_slide_move--anyang--title--pay">월 75,650원부터</p>
+                                </div>
+                                <div class="detail_explain_slide_move--anyang--join join">알아보기</div>
+                            </li>
+                        </ul>
+                        <ul class="detail_explain_slide_move--nonhyeon detail_slide_margin">
+                            <li class="detail_explain_slide_move--nonhyeon--img_wrap">
+                                <div class="detail_explain_slide_move--nonhyeon--img"></div>
+                            </li>
+                            <li class="detail_explain_slide_move_img_info_wrap">
+                                <div class="detail_explain_slide_move--nonhyeon--title detail_slide_text">
+                                    <p class="detail_explain_slide_move--nonhyeon--title--subject">논현점</p>
+                                    <p class="detail_explain_slide_move--nonhyeon--title--pay">월 93,000원부터</p>
+                                </div>
+                                <div class="detail_explain_slide_move--nonhyeon--join join">알아보기</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+            <div class="temp"></div>
+            <article class="detail_explain_product_wrap">
+                <ul class="detail_explain_product_top_wrap">
+                    <li class="detail_explain_product_title">
+                        <p class="detail_explain_product_title--subject">물품 단위 보관</p>
+                        <p class="detail_explain_product_title--sub">박스풀 자체 픽업 및 배송</p>
+                        <p class="detail_explain_product_title--sub_b">객수 단위 짐보관 가능</p>
+                    </li>
+                    <li class="detail_explain_product_apply">
+                        <p class="detail_explain_product_apply--apply">바로 신청하기</p>
+                        <p class="detail_explain_product_apply--estn">총알 견적 받기</p>
+                    </li>
+                    <li class="detail_explain_product_img_wrap">
+                        <div class="detail_explain_product_img"></div>
+                    </li>
+                </ul>
+                <ul class="detail_explain_product_bottom_wrap">
+                    <li class="detail_explain_product_type detail_explain_product_type--paper">
+                        <div class="product_type--paper--img_wrap">
+                            <div class="product_type_paper_img"></div>
+                        </div>
+                        <div class="product_type_paper_info_wrap">
+                            <div class="product_type_paper_info_small_wrap">
+                                <p class="paper_info_text_money">₩7,500</p>
+                                <p class="paper_info_text_month">/1개월</p>
+                                <p class="paper_info_text_name">종이박스</p>
+                            </div>
+                        </div>
+                        <div class="product_type_detail">자세히보기 ></div>
+                    </li>
+                    <li class="detail_explain_product_type detail_explain_product_type--standard">
+                        <div class="product_type--standard--img_wrap">
+                            <div class="product_type_standard_img"></div>
+                        </div>
+                        <div class="product_type_standard_info_wrap">
+                            <div class="product_type_standard_info_small_wrap">
+                                <p class="standard_info_text_money">₩10,000</p>
+                                <p class="standard_info_text_month">/1개월</p>
+                                <p class="standard_info_text_name">규격박스</p>
+                            </div>
+                        </div>
+                        <div class="product_type_detail">자세히보기 ></div>
+                    </li>
+                    <li class="detail_explain_product_type detail_explain_product_type--noStd">
+                        <div class="product_type--noStd--img_wrap">
+                            <div class="product_type_noStd_img"></div>
+                        </div>
+                        <div class="product_type_noStd_info_wrap">
+                            <div class="product_type_noStd_info_small_wrap">
+                                <p class="noStd_info_text_money">₩20,000</p>
+                                <p class="noStd_info_text_month">/1개월</p>
+                                <p class="noStd_info_text_name">비규격품목</p>
+                            </div>
+                        </div>
+                        <div class="product_type_detail">자세히보기 ></div>
+                    </li>
+                    <li class="detail_explain_product_type detail_explain_product_type--hang">
+                        <div class="product_type--hang--img_wrap">
+                            <div class="product_type_hang_img"></div>
+                        </div>
+                        <div class="product_type_hang_info_wrap">
+                            <div class="product_type_hang_info_small_wrap">
+                                <p class="hang_info_text_money">₩25,000</p>
+                                <p class="hang_info_text_month">/1개월</p>
+                                <p class="hang_info_text_name">옷걸이박스</p>
+                            </div>
+                        </div>
+                        <div class="product_type_detail">자세히보기 ></div>
+                    </li>
+                </ul>
+                <ul class="detail_explain_product_type_check_top">
+                    <li class="detail_explain_product_type_check detail_explain_product_type_check_top--pickup">
+                        <div class="product_check_icon"></div>
+                        <div class="text_free product_top_pickup_text_free">무료</div>
+                        <div class="product_check_text">픽업</div>
+                        
+                    </li>
+                    <li class="detail_explain_product_type_check detail_explain_product_type_check_top--plastic">
+                        <div class="product_check_icon"></div>
+                        <div class="text_free product_top_plastic_text_free">무료</div>
+                        <div class="product_check_text">플라스틱 박스 대여</div>
+                    </li>
+                    <li class="detail_explain_product_type_check detail_explain_product_type_check_top--assurance">
+                        <div class="product_check_icon"></div>
+                        <div class="text_free product_top_assurance_text_free">무료 보험</div>
+                        <div class="product_check_text">물품당 최대 50만원</div>
+                    </li>
+                </ul>
+                <ul class="detail_explain_product_type_check_bot">
+                    <li class="detail_explain_product_type_check detail_explain_product_type_check_bot--delivery">
+                        <div class="product_check_icon"></div>
+                        <div class="text_free product_bot_delivery_text_free">빠른</div>
+                        <div class="product_check_text">배송</div>
+                    </li>
+                    <li class="detail_explain_product_type_check detail_explain_product_type_check_bot--cheap">
+                        <div class="product_check_icon"></div>
+                        <div class="text_free product_bot_cheap_text_free">저렴한</div>
+                        <div class="product_check_text">배송비</div>
+                    </li>
+                    <li class="detail_explain_product_type_check detail_explain_product_type_check_bot--control">
+                        <div class="product_check_icon"></div>
+                        <div class="text_free product_bot_control_text_free">온도·습도</div>
+                        <div class="product_check_text">제어</div>
+                    </li>
+                </ul>
+            </article>
+            <article class="detail_explain_area_wrap">
+                <ul class="detail_explain_area_top_wrap">
+                    <li class="detail_explain_area_title">
+                        <p class="detail_explain_area_title--subject">면적 단위 보관</p>
+                        <p class="detail_explain_area_title--sub">박스풀 자체 픽업 및 배송</p>
+                        <p class="detail_explain_area_title--sub_b">대형 물품, 이삿짐 등 면적 단위</p>
+                        <p class="detail_explain_area_title--sub_c">짐보관 가능</p>
+                    </li>
+                    <li class="detail_explain_area_apply">
+                        <p class="detail_explain_area_apply--apply">바로 신청하기</p>
+                        <p class="detail_explain_area_apply--estn">로켓 견적 받기</p>
+                    </li>
+                    <li class="detail_explain_area_img_wrap">
+                        <div class="detail_explain_area_img"></div>
+                    </li>
+                </ul>
+                <ul class="detail_explain_area_bottom_wrap">
+                    <li class="detail_explain_area_type detail_explain_area_type--one_sixth">
+                        <div class="area_type--one_sixth--img_wrap">
+                            <div class="area_type_one_sixth_img"></div>
+                        </div>
+                        <div class="area_type_one_sixth_info_wrap">
+                            <div class="area_type_one_sixth_info_small_wrap">
+                                <p class="one_sixth_info_text_money">₩69,000</p>
+                                <p class="one_sixth_info_text_month">/1개월</p>
+                                <p class="one_sixth_info_text_name">1/6평</p>
+                            </div>
+                        </div>
+                        <div class="area_type_detail">자세히보기 ></div>
+                    </li>
+                    <li class="detail_explain_area_type detail_explain_area_type--one_third">
+                        <div class="area_type--one_third--img_wrap">
+                            <div class="area_type_one_third_img"></div>
+                        </div>
+                        <div class="area_type_one_third_info_wrap">
+                            <div class="area_type_one_third_info_small_wrap">
+                                <p class="one_third_info_text_money">₩99,000</p>
+                                <p class="one_third_info_text_month">/1개월</p>
+                                <p class="one_third_info_text_name">1/3평</p>
+                            </div>
+                        </div>
+                        <div class="area_type_detail">자세히보기 ></div>
+                    </li>
+                    <li class="detail_explain_area_type detail_explain_area_type--two_third">
+                        <div class="area_type--two_third--img_wrap">
+                            <div class="area_type_two_third_img"></div>
+                        </div>
+                        <div class="area_type_two_third_info_wrap">
+                            <div class="area_type_two_third_info_small_wrap">
+                                <p class="two_third_info_text_money">₩169,000</p>
+                                <p class="two_third_info_text_month">/1개월</p>
+                                <p class="two_third_info_text_name">2/3평</p>
+                            </div>
+                        </div>
+                        <div class="area_type_detail">자세히보기 ></div>
+                    </li>
+                    <li class="detail_explain_area_type detail_explain_area_type--just_one">
+                        <div class="area_type--just_one--img_wrap">
+                            <div class="area_type_just_one_img"></div>
+                        </div>
+                        <div class="area_type_just_one_info_wrap">
+                            <div class="area_type_just_one_info_small_wrap">
+                                <p class="just_one_info_text_money">₩239,000</p>
+                                <p class="just_one_info_text_month">/1개월</p>
+                                <p class="just_one_info_text_name">1평</p>
+                            </div>
+                        </div>
+                        <div class="area_type_detail">자세히보기 ></div>
+                    </li>
+                </ul>
+                <ul class="detail_explain_area_type_check">
+                    <li class="detail_explain_area_type_check detail_explain_area_type_check--delivery">
+                        <div class="area_check_icon"></div>
+                        <div class="text_free area_delivery_text_free">빠른</div>
+                        <div class="area_check_text">배송</div>
+                        
+                    </li>
+                    <li class="detail_explain_area_type_check detail_explain_area_type_check--all_in_one">
+                        <div class="area_check_icon"></div>
+                        <div class="text_free area_all_in_one_text_free">업계최초 픽업·보관·배송</div>
+                        <div class="area_check_text">한번에 가능</div>
+                    </li>
+                    <li class="detail_explain_area_type_check detail_explain_area_type_check--assurance">
+                        <div class="area_check_icon"></div>
+                        <div class="text_free area_assurance_text_free">무료 보험</div>
+                        <div class="area_check_text">물품당 최대 50만원</div>
+                    </li>
+                    <li class="detail_explain_area_type_check detail_explain_area_type_check--control">
+                        <div class="area_check_icon"></div>
+                        <div class="text_free area_control_text_free">온도·습도</div>
+                        <div class="area_check_text">제어</div>
+                    </li>
+                </ul>
+            </article>
+        </section>
+        <section class="safe_wrap">
+            <article class="safe_title">
+                <ul class="safe_title--wrap">
+                    <li class="safe_title--wrap--subject">바이러스 안심 공유창고</li>
+                    <li class="safe_title--wrap--background"></li>
+                </ul>
+            </article>
+            <article class="safe_category">
+                <ul class="safe_category_top">
+                    <li class="safe_category_security">
+                        <div class="security_img_wrap">
+                            <div class="security_img"></div>
+                        </div>
+                        <div class="security_info_wrap safe_info_wrap">
+                            <div class="security_title safe_category_title">보안</div>
+                            <p class="security_info_text_a">철저한 24시간 보안,</p>
+                            <p class="security_info_text_b">모션 감지 카메라 및 알람</p>
+                        </div>
+                    </li>
+                    <li class="safe_category_fire">
+                        <div class="fire_img_wrap">
+                            <div class="fire_img"></div>
+                        </div>
+                        <div class="fire_info_wrap safe_info_wrap">
+                            <div class="fire_title safe_category_title">화재 방지</div>
+                            <p class="fire_info_text_a">자동 스프링클러,</p>
+                            <p class="fire_info_text_b">화재 경보기 및</p>
+                            <p class="fire_info_text_c">소방 호스 설치</p>
+                        </div>
+                    </li>
+                    <li class="safe_category_indoor">
+                        <div class="indoor_img_wrap">
+                            <div class="indoor_img"></div>
+                        </div>
+                        <div class="indoor_info_wrap safe_info_wrap">
+                            <div class="indoor_title safe_category_title">실내환경 조절</div>
+                            <p class="indoor_info_text_a">온도 및 습도 제어 관리</p>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="safe_category_bot">
+                    <li class="safe_category_assurance">
+                        <div class="assurance_img_wrap">
+                            <div class="assurance_img"></div>
+                        </div>
+                        <div class="assurance_info_wrap safe_info_wrap">
+                            <div class="assurance_title safe_category_title">무료 보험</div>
+                            <p class="assurance_info_text_a">보관된 모든 물품에 대한</p>
+                            <p class="assurance_info_text_b">무료 보험 보장</p>
+                        </div>
+                    </li>
+                    <li class="safe_category_open">
+                        <div class="open_img_wrap">
+                            <div class="open_img"></div>
+                        </div>
+                        <div class="open_info_wrap safe_info_wrap">
+                            <div class="open_title safe_category_title">오픈 플랜식 시설</div>
+                            <p class="open_info_text_a">파티션이 없어 공간 활용이</p>
+                            <p class="open_info_text_b">자유로운 보관시설</p>
+                        </div>
+                    </li>
+                    <li class="safe_category_staffOnly">
+                        <div class="staffOnly_img_wrap">
+                            <div class="staffOnly_img"></div>
+                        </div>
+                        <div class="staffOnly_info_wrap safe_info_wrap">
+                            <div class="staffOnly_title safe_category_title">제한된 접근</div>
+                            <p class="staffOnly_info_text_a">인가된 BOXFUL 직원만 출입</p>
+                            <p class="staffOnly_info_text_b">가능한 물건 보관 창고</p>
+                        </div>
+                    </li>
+                </ul>
+            </article>
+            <article class="safe_consultation">
+                <div class="consultation_simple">간편 상담하기</div>
+                <div class="consultation_text_wrap">
+                    <p class="consultation_text">
+                        BOXFUL의&nbsp;
+                        <p class="consultation_text_accent">보관 제한 품목</p> 
+                        목록을 확인해주세요
+                    </p>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <section class="footer_contact">
+            <article class="footer_contact--tel">
+                <div class="footer_contact--tel--img"></div>
+                <div class="footer_contact--tel--num">
+                    <a href="tel:+8225614999">02-561-4999</a>
+                </div>
+            </article>
+            <article class="footer_contact--email">
+                <div class="footer_contact--email--img"></div>
+                <div class="footer_contact--email--address">
+                    <a href="mailto:support@boxful.kr">support@boxful.kr</a>
+                </div>
+            </article>
+            <article class="footer_contact--kakao">
+                <div class="footer_contact--kakao--img"></div>
+                <div class="footer_contact--kakao--text">카카오톡 상담하기</div>
+            </article>
+
+        </section>
+        <section class="footer_main">
+            <ul class="footer_nav">
+                <li class="footer_nav_title footer_nav--company">회사소개</li>
+                <li class="footer_nav_title footer_nav--blog">블로그</li>
+                <li class="footer_nav_title footer_nav--question">자주 묻는 질문</li>
+                <li class="footer_nav_title footer_nav--info">개인정보 처리방침</li>
+                <li class="footer_nav_title footer_nav--agreements">이용약관</li>
+                <li class="footer_nav_title footer_nav--join">가맹문의</li>
+            </ul>
+            <div class="footer_nav_underline"></div>
+            
+            <article class="footer_logo"></article>
+            <article class="footer_title">박스풀 공유창고</article>
+            <article class="footer_company_info">
+                <ul class="footer_company_info--ul">
+                    <li class="footer_company_info_li footer_company_info--ul--company_name">(주)박스풀</li>
+                    <li class="footer_company_info_li footer_company_info--ul--ceo_name">대표 성정학</li>
+                    <li class="footer_company_info_li footer_company_info--ul--address">서울시 강남구 역삼로 8길 3, 2층</li>
+                    <li class="footer_company_info_li footer_company_info--ul--corporate_num">
+                        <p>사업자등록번호:</p>
+                        <p>530-86-00179</p>
+                    </li>
+                    <li class="footer_company_info_li footer_company_info--ul--registration_num">
+                        <p class="footer_company_info--ul--registration_num--subject">통신판매업신고번호:</p>
+                        <p>제 2019-서울강남-01917</p>
+                    </li>
+                </ul>
+            </article>
+            <article class="footer_time">
+                <ul class="footer_time--ul">
+                    <li class="footer_time--ul--li footer_time--ul--customer_center">
+                        <p class="footer_time_subject footer_time--ul--customer_center--subject">고객센터</p>
+                        <p class="footer_time--ul--customer_center--text">월요일 - 금요일 오전 10시 ~ 오후 7시</p>
+                    </li>
+                    <li class="footer_time--ul--li footer_time--ul--delivery">
+                        <p class="footer_time_subject footer_time--ul--delivery--subject">픽업 / 배송</p>
+                        <p class="footer_time--ul--delivery--text">월요일 - 금요일 오전 10시 ~ 오후 8시</p>
+                    </li>
+                    <li class="footer_time--ul--li footer_time--ul--offday">*주말 및 공휴일 휴무</li>
+                    <li class="footer_time--ul--li footer_time--ul--self">
+                        <p class="footer_time_subject footer_time--ul--self--subject">셀프스토리지</p>
+                        <p class="footer_time--ul--self--text">연중무휴</p>
+                    </li>
+                </ul>
+            </article>
+            <article class="footer_association">
+                <div class="footer_association--img footer_association--visa"></div>
+                <div class="footer_association--img footer_association--mastercard"></div>
+                <div class="footer_association--img footer_association--paypal"></div>
+            </article>
+        </section>
+    </footer>
+</body>
+</html>
